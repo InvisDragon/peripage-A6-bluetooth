@@ -43,13 +43,16 @@ You can simply install all requirements using PIP:
 pip install -r requirements.txt
 ```
 
-The next step is to identify the Bluetooth MAC address of your printer. On Linux, this can be easily done using `hcitool`:
+The next step is to identify the Bluetooth MAC address of your printer. On Linux, this can be easily done using `bluetoothctl`:
 
 ```bash
-elias@luna:~$ hcitool scan
-Scanning ...
-B5:5B:13:08:F6:22	PeriPage_F622
-elias@luna:~$
+elias@luna:~$ bluetoothctl scan
+[NEW] Media /org/bluez/hci0 
+	SupportedUUIDs: 00000000-0000-0000-0000-008000000000
+	SupportedUUIDs: 00000000-0000-0000-0000-008000000000
+Agent registered
+[CHG] Device B5:5B:13:08:F6:22 Name: PeriPage_14B3_BLE
+[CHG] Device B5:5B:13:08:F6:22 Alias: PeriPage_14B3_BLE
 ```
 ## Printing Images
 Once you know the BT MAC address, printing is straightforward

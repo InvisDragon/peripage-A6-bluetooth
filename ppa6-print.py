@@ -125,7 +125,7 @@ def printImage(img):
         print ("Target image height is too large. Can't print this (yet)")
         sys.exit(1)
 
-    img = img.resize((384, new_height), Image.ANTIALIAS)
+    img = img.resize((384, new_height))
 
     img = img.convert("1")
     # write chunks of 122 bytes to printer
